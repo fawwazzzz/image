@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+</head>
+
+<body style="margin: 200px;">
+
+    <select id="Zoo" onchange="PilihGambar()">
+        <option value="https://www.bali-zoo.com/assets/img/jpg/paralax_slider/discover_1.jpg">Pilih Gambar</option>
+        <option value="https://www.adelaidezoo.com.au/wp-content/uploads/sites/2/2020/06/AZ-reopening-blog.jpg">Panda</option>
+        <option value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD4i1te4DuAHTUmpstrwiW46Idr-jTz_PHUQ&usqp=CAU">Jerapah</option>
+        <option value="https://static.euronews.com/articles/stories/04/70/52/02/945x531_cmsv2_49a3f08d-5c8e-5c15-92bb-b9e064b07b60-4705202.jpg">Harimau</option>
+        <option value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqqQ2BgMdq6_u2zEqQEj4PnOpoPSoc1Fl6mg&usqp=CAU">Singa</option>
+        <option value="https://media.tacdn.com/media/attractions-splice-spp-674x446/07/6f/b1/74.jpg">Orang utan</option>
+    </select>
+
+    <br />
+    <img src="https://www.bali-zoo.com/assets/img/jpg/paralax_slider/discover_1.jpg" alt="photo" id="photo" style="width: 100%;">
+    <script type="text/javascript">
+        function PilihGambar() {
+            let photo = document.getElementById("Zoo").value;
+            document.getElementById("photo").src = photo;
+        }
+    </script>
+
+</body>
+
+</html>
