@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>Chat Box</title>
+      <style>  
+          .button-chat{
+            background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 700px;
+  margin-bottom:10px;
+  opacity: 0.8;
+          }
+          .input-chat{
+              padding: 16px 20px;
+              border: 1px solid black;
+              width: 660px;
+          }
+          .chat-box{
+              width: 700px;
+              height: 330px;
+              border: 1px solid black;
+              margin-bottom: 1rem;
+              overflow: auto;
+          }
+      </style>
+</head>
+<body>
+    <h1>Chat Box</h1>
+   <main>
+       <div class ="chat-box"></div>
+       <div>
+           <input type="text" class="input-chat"><br/>
+           <button class="button-chat">kirim</button>
+       </div>
+   </main>
+   <script>
+      let chatBox = document.querySelector(".chat-box")
+      const inputChat = document.querySelector(".input-chat")
+      const buttonChat = document.querySelector(".button-chat")
+
+      buttonChat.addEventListener('click', function() {
+          chatBox.innerHTML = chatBox.innerHTML + "br/>" + inputChat.value;
+          inputChat.value = "" ;
+      })
+   </script>
+</body>
+</html>
